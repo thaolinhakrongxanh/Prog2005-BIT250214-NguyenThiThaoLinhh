@@ -1,7 +1,10 @@
-a = int(input("a = "))
-b = int(input("b = "))
+n = int(input("Nhập số: "))
+max_digit = 0
 
-while b != 0:
-    a, b = b, a % b
+while n > 0:
+    d = n % 10
+    if d > max_digit:
+        max_digit = d
+    n //= 10
 
-print("UCLN =", a)
+print(max_digit)
